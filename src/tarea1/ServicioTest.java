@@ -32,6 +32,13 @@ class ServicioTest {
 	
 	@Test 
 	void estaDisponible() {
-		
+		Servicio s3 = new Servicio("Limpieza", 40);
+		assertEquals(true, s3.estaDisponible(1));
+	}
+	
+	@Test 
+	void estaDisponible2() {
+		Servicio s3 = new Servicio("Limpieza", 40);
+		assertEquals(false, s3.estaDisponible(-12));
 	}
 }
