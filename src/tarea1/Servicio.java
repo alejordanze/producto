@@ -18,6 +18,7 @@ public class Servicio extends Producto{
 		return hours * this.precio;
 	}
 	
+	@Override
 	int getPrecio() {
 		return this.precio;
 	}
@@ -26,6 +27,7 @@ public class Servicio extends Producto{
 		this.precio = nuevoPrecio;
 	}
 
+	@Override
 	public String getNombre() {
 		return nombre;
 	}

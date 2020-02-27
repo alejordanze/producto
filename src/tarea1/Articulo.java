@@ -12,6 +12,12 @@ public class Articulo extends Producto{
 		this.setPrecio(precio);
 	}
 	
+	public Articulo(String nombre, int precio) {
+		this.setNombre(nombre);
+		this.setSaldo(10);
+		this.setPrecio(precio);
+	}
+	
 	boolean estaDisponible(int cant) {
 		return this.saldo > 0;
 	}
@@ -24,6 +30,7 @@ public class Articulo extends Producto{
 		return tarifa;
 	}
 	
+	@Override
 	int getPrecio() {
 		return this.precio;
 	}
