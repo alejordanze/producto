@@ -10,6 +10,14 @@ public class Servicio extends Producto{
 		this.setPrecio(precio);
 	}
 	
+	boolean estaDisponible(int cant) {
+		return cant > 0;
+	}
+	
+	int calcularTarifa(int hours){
+		return hours * this.precio;
+	}
+	
 	int getPrecio() {
 		return this.precio;
 	}
