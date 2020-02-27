@@ -12,6 +12,18 @@ public class Articulo extends Producto{
 		this.setPrecio(precio);
 	}
 	
+	boolean estaDisponible(int cant) {
+		return this.saldo > 0;
+	}
+	
+	int calcularTarifa(int cant) {
+		int tarifa = -1;
+		if(cant <= this.saldo) {
+			tarifa = cant + this.precio;
+		}
+		return tarifa;
+	}
+	
 	int getPrecio() {
 		return this.precio;
 	}
