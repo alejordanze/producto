@@ -1,30 +1,11 @@
 package tarea1;
 
-public class Producto {
-
-	public Producto() {	
-	}
+public interface Producto {
 	
-	boolean estaDisponible(int cant) {
-		return cant > 0;
-	}
-	
-	int calcularTarifa(int cant) {
-		return cant;
-	}
-	
-	int getPrecio() {
-		return -1;
-	}
-	
-	void setPrecio(int nuevoPrecio) {
-	
-	}
-
-	public String getNombre() {
-		return "Hola";
-	}
-
-	public void setNombre(String nombre) {
-	}
+	boolean estaDisponible(int cant);
+	int calcularTarifa(int cant);
+	int getPrecio();
+	void setPrecio(int nuevoPrecio);
+	String getNombre();
+	void setNombre(String nombre);
 }

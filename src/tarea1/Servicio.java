@@ -1,6 +1,6 @@
 package tarea1;
 
-public class Servicio extends Producto{
+public class Servicio implements Producto{
 
 	private String nombre;
 	private int precio;
@@ -10,20 +10,21 @@ public class Servicio extends Producto{
 		this.setPrecio(precio);
 	}
 	
-	boolean estaDisponible(int cant) {
+	@Override
+	public boolean estaDisponible(int cant) {
 		return cant > 0;
 	}
 	
-	int calcularTarifa(int hours){
+	@Override
+	public int calcularTarifa(int hours){
 		return hours * this.precio;
 	}
 	
-	@Override
-	int getPrecio() {
+	public int getPrecio() {
 		return this.precio;
 	}
 	
-	void setPrecio(int nuevoPrecio) {
+	public void setPrecio(int nuevoPrecio) {
 		this.precio = nuevoPrecio;
 	}
 
